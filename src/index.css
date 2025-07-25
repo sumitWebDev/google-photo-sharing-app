@@ -1,0 +1,11 @@
+*{
+	font-family: 'PT Sans', sans-serif;
+}
+
+.show{
+	display: block !important;
+}
+
+.hide{
+	display: none !important;
+}

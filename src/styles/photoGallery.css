@@ -1,0 +1,99 @@
+/** Photo Gallery Styling **/
+.list-group {
+  display: flex;
+  gap: 5px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-bottom: 53px;
+}
+
+.list-group::after {
+  content: "";
+  flex-grow: 100;
+}
+
+.list-group .list-group-photo {
+  flex-grow: 1;
+  position: relative;
+  list-style-type: none;
+  background-color: #e7f0fd;
+}
+
+.list-group-photo i {
+  position: absolute;
+  z-index: 1;
+}
+
+.list-group-photo i:before {
+  font-size: 20px;
+  padding: 10px;
+}
+
+.list-group .list-group-photo img {
+  height: 220px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.list-group-photo .selected + img {
+  transform: scale(0.9);
+}
+
+/** On select images showing select **/
+.list-group-photo .hover-select {
+  display: none;
+}
+
+.list-group-photo .image-select-mode {
+  color: white;
+  left: 0;
+  top: 0;
+}
+.list-group-photo .image-select-mode::before {
+  -webkit-text-stroke: 2px white;
+  opacity: 0.7;
+}
+
+.list-group-photo:hover .hover-select {
+  display: block;
+  cursor: pointer;
+  color: white;
+}
+
+.list-group .list-group-photo .selected {
+  top: 0;
+  left: 0;
+}
+
+/** Selected images styles **/
+.list-group .list-group-photo .selected:before {
+  color: #1c73e9;
+}
+
+.list-group .list-group-photo .sent {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.list-group .list-group-photo .sent::before {
+  color: white;
+  opacity: 0.8;
+  font-size: 12em;
+}
+
+/** Approved images styles **/
+.list-group-photo.approved {
+  pointer-events: none;
+  cursor: not-allowed;
+}
+
+.list-group .list-group-photo .approved {
+  bottom: 0;
+  right: 0;
+}
+
+.list-group .list-group-photo .approved:before {
+  color: white;
+  font-size: 19px;
+}

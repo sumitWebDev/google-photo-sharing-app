@@ -1,0 +1,65 @@
+/** Sticky Nav styles **/
+.sticky-nav{
+    position: fixed;
+    height: 50px;
+    background-color: #D4E5F7;
+    width: 100%;
+    bottom: 0;
+    border-top: 2px solid #2D88D9;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: right;
+    z-index: 2
+}
+
+.sticky-nav .people-avatar{ 
+    margin: 17px;
+}
+.sticky-nav .share-icon{
+    margin-left: auto;
+}
+
+.sticky-nav i:before{
+    font-size: 22px;
+}
+
+/** Selected images copy footer **/
+.clear-selection  .btn-close{
+    padding: 20px;
+}
+.photo-selected span{
+    font-size: 22px;
+}
+.photo-selected span .items{
+    padding: 0 4px 10px;
+}
+
+.clear-selection{
+    margin: 0 15px;
+}
+
+/** Modal styles **/
+.send-data{
+    width: auto;
+    height: 150px;
+    background: white;
+    bottom: 143%;
+    position: absolute;
+    padding: 20px;
+    right: 1%;
+}
+.send-data.show p{
+    margin: 31px;
+    text-align: center;
+}
+.send-data.show button{
+    margin-left: 23px;
+}
+.send-data.show .modal-arrow{
+    color: white;
+    bottom: -16px;
+    right: 40px;
+    position: absolute;}
+
+
